@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="verClientes" targetNamespace="http://tempuri.org/verClientes.xsd" xmlns:mstns="http://tempuri.org/verClientes.xsd" xmlns="http://tempuri.org/verClientes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="cadenaConn" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="cadenaConn (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ITCG_FERRETERIA.Properties.Settings.GlobalReference.Default.cadenaConn" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="verclientesTableAdapter" GeneratorDataComponentClassName="verclientesTableAdapter" Name="verclientes" UserDataComponentName="verclientesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="cadenaConn (Settings)" DbObjectName="ferreteria.verclientes" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Codigo_C`, `Nombre_C`, `Num_Tel`, `estado` FROM `ferreteria`.`verclientes`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Codigo_C" DataSetColumn="Codigo_C" />
+              <Mapping SourceColumn="Nombre_C" DataSetColumn="Nombre_C" />
+              <Mapping SourceColumn="Num_Tel" DataSetColumn="Num_Tel" />
+              <Mapping SourceColumn="estado" DataSetColumn="estado" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="verClientes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="verClientes" msprop:Generator_UserDSName="verClientes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="verclientes" msprop:Generator_TableClassName="verclientesDataTable" msprop:Generator_TableVarName="tableverclientes" msprop:Generator_TablePropName="verclientes" msprop:Generator_RowDeletingName="verclientesRowDeleting" msprop:Generator_RowChangingName="verclientesRowChanging" msprop:Generator_RowEvHandlerName="verclientesRowChangeEventHandler" msprop:Generator_RowDeletedName="verclientesRowDeleted" msprop:Generator_UserTableName="verclientes" msprop:Generator_RowChangedName="verclientesRowChanged" msprop:Generator_RowEvArgName="verclientesRowChangeEvent" msprop:Generator_RowClassName="verclientesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Codigo_C" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCodigo_C" msprop:Generator_ColumnPropNameInRow="Codigo_C" msprop:Generator_ColumnPropNameInTable="Codigo_CColumn" msprop:Generator_UserColumnName="Codigo_C" type="xs:int" />
+              <xs:element name="Nombre_C" msprop:Generator_ColumnVarNameInTable="columnNombre_C" msprop:Generator_ColumnPropNameInRow="Nombre_C" msprop:Generator_ColumnPropNameInTable="Nombre_CColumn" msprop:Generator_UserColumnName="Nombre_C">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Num_Tel" msprop:Generator_ColumnVarNameInTable="columnNum_Tel" msprop:Generator_ColumnPropNameInRow="Num_Tel" msprop:Generator_ColumnPropNameInTable="Num_TelColumn" msprop:Generator_UserColumnName="Num_Tel">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="estado" msprop:Generator_ColumnVarNameInTable="columnestado" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_UserColumnName="estado">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:verclientes" />
+      <xs:field xpath="mstns:Codigo_C" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

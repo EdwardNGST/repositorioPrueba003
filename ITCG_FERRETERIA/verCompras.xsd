@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="verCompras" targetNamespace="http://tempuri.org/verCompras.xsd" xmlns:mstns="http://tempuri.org/verCompras.xsd" xmlns="http://tempuri.org/verCompras.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="cadenaConn" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="cadenaConn (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ITCG_FERRETERIA.Properties.Settings.GlobalReference.Default.cadenaConn" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vercomprasTableAdapter" GeneratorDataComponentClassName="vercomprasTableAdapter" Name="vercompras" UserDataComponentName="vercomprasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="cadenaConn (Settings)" DbObjectName="ferreteria.vercompras" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Codigo de Compra`, `Codigo de Producto`, `Codigo del Proveedor`, `Cantidad`, `Fecha_C` FROM `ferreteria`.`vercompras`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Codigo de Compra" DataSetColumn="Codigo de Compra" />
+              <Mapping SourceColumn="Codigo de Producto" DataSetColumn="Codigo de Producto" />
+              <Mapping SourceColumn="Codigo del Proveedor" DataSetColumn="Codigo del Proveedor" />
+              <Mapping SourceColumn="Cantidad" DataSetColumn="Cantidad" />
+              <Mapping SourceColumn="Fecha_C" DataSetColumn="Fecha_C" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="verCompras" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="verCompras" msprop:Generator_UserDSName="verCompras">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vercompras" msprop:Generator_TableClassName="vercomprasDataTable" msprop:Generator_TableVarName="tablevercompras" msprop:Generator_TablePropName="vercompras" msprop:Generator_RowDeletingName="vercomprasRowDeleting" msprop:Generator_RowChangingName="vercomprasRowChanging" msprop:Generator_RowEvHandlerName="vercomprasRowChangeEventHandler" msprop:Generator_RowDeletedName="vercomprasRowDeleted" msprop:Generator_UserTableName="vercompras" msprop:Generator_RowChangedName="vercomprasRowChanged" msprop:Generator_RowEvArgName="vercomprasRowChangeEvent" msprop:Generator_RowClassName="vercomprasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Codigo_x0020_de_x0020_Compra" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCodigo_de_Compra" msprop:Generator_ColumnPropNameInRow="Codigo_de_Compra" msprop:Generator_ColumnPropNameInTable="Codigo_de_CompraColumn" msprop:Generator_UserColumnName="Codigo de Compra" type="xs:int" />
+              <xs:element name="Codigo_x0020_de_x0020_Producto" msprop:Generator_ColumnVarNameInTable="columnCodigo_de_Producto" msprop:Generator_ColumnPropNameInRow="Codigo_de_Producto" msprop:Generator_ColumnPropNameInTable="Codigo_de_ProductoColumn" msprop:Generator_UserColumnName="Codigo de Producto" type="xs:int" />
+              <xs:element name="Codigo_x0020_del_x0020_Proveedor" msprop:Generator_ColumnVarNameInTable="columnCodigo_del_Proveedor" msprop:Generator_ColumnPropNameInRow="Codigo_del_Proveedor" msprop:Generator_ColumnPropNameInTable="Codigo_del_ProveedorColumn" msprop:Generator_UserColumnName="Codigo del Proveedor" type="xs:int" />
+              <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:int" />
+              <xs:element name="Fecha_C" msprop:Generator_ColumnVarNameInTable="columnFecha_C" msprop:Generator_ColumnPropNameInRow="Fecha_C" msprop:Generator_ColumnPropNameInTable="Fecha_CColumn" msprop:Generator_UserColumnName="Fecha_C" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vercompras" />
+      <xs:field xpath="mstns:Codigo_x0020_de_x0020_Compra" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

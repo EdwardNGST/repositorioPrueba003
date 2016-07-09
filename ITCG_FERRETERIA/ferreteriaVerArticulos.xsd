@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ferreteriaVerArticulos" targetNamespace="http://tempuri.org/ferreteriaVerArticulos.xsd" xmlns:mstns="http://tempuri.org/ferreteriaVerArticulos.xsd" xmlns="http://tempuri.org/ferreteriaVerArticulos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="cadenaConn" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="cadenaConn (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ITCG_FERRETERIA.Properties.Settings.GlobalReference.Default.cadenaConn" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="verarticulosTableAdapter" GeneratorDataComponentClassName="verarticulosTableAdapter" Name="verarticulos" UserDataComponentName="verarticulosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="cadenaConn (Settings)" DbObjectName="ferreteria.verarticulos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Codigo_A`, `Nombre`, `Tipo`, `Precio`, `Stock` FROM `ferreteria`.`verarticulos`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Codigo_A" DataSetColumn="Codigo_A" />
+              <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
+              <Mapping SourceColumn="Tipo" DataSetColumn="Tipo" />
+              <Mapping SourceColumn="Precio" DataSetColumn="Precio" />
+              <Mapping SourceColumn="Stock" DataSetColumn="Stock" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ferreteriaVerArticulos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ferreteriaVerArticulos" msprop:Generator_UserDSName="ferreteriaVerArticulos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="verarticulos" msprop:Generator_TableClassName="verarticulosDataTable" msprop:Generator_TableVarName="tableverarticulos" msprop:Generator_TablePropName="verarticulos" msprop:Generator_RowDeletingName="verarticulosRowDeleting" msprop:Generator_RowChangingName="verarticulosRowChanging" msprop:Generator_RowEvHandlerName="verarticulosRowChangeEventHandler" msprop:Generator_RowDeletedName="verarticulosRowDeleted" msprop:Generator_UserTableName="verarticulos" msprop:Generator_RowChangedName="verarticulosRowChanged" msprop:Generator_RowEvArgName="verarticulosRowChangeEvent" msprop:Generator_RowClassName="verarticulosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Codigo_A" msprop:Generator_ColumnVarNameInTable="columnCodigo_A" msprop:Generator_ColumnPropNameInRow="Codigo_A" msprop:Generator_ColumnPropNameInTable="Codigo_AColumn" msprop:Generator_UserColumnName="Codigo_A" type="xs:int" />
+              <xs:element name="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_UserColumnName="Nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tipo" msprop:Generator_ColumnVarNameInTable="columnTipo" msprop:Generator_ColumnPropNameInRow="Tipo" msprop:Generator_ColumnPropNameInTable="TipoColumn" msprop:Generator_UserColumnName="Tipo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Precio" msprop:Generator_ColumnVarNameInTable="columnPrecio" msprop:Generator_ColumnPropNameInRow="Precio" msprop:Generator_ColumnPropNameInTable="PrecioColumn" msprop:Generator_UserColumnName="Precio" type="xs:decimal" />
+              <xs:element name="Stock" msprop:Generator_ColumnVarNameInTable="columnStock" msprop:Generator_ColumnPropNameInRow="Stock" msprop:Generator_ColumnPropNameInTable="StockColumn" msprop:Generator_UserColumnName="Stock" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:verarticulos" />
+      <xs:field xpath="mstns:Codigo_A" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

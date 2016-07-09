@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ferreteriaVerProveedores" targetNamespace="http://tempuri.org/ferreteriaVerProveedores.xsd" xmlns:mstns="http://tempuri.org/ferreteriaVerProveedores.xsd" xmlns="http://tempuri.org/ferreteriaVerProveedores.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="cadenaConn" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="cadenaConn (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ITCG_FERRETERIA.Properties.Settings.GlobalReference.Default.cadenaConn" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="verproveedoresTableAdapter" GeneratorDataComponentClassName="verproveedoresTableAdapter" Name="verproveedores" UserDataComponentName="verproveedoresTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="cadenaConn (Settings)" DbObjectName="ferreteria.verproveedores" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Codigo_P`, `Nombre_P`, `Num_Tel`, `Direccion` FROM `ferreteria`.`verproveedores`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Codigo_P" DataSetColumn="Codigo_P" />
+              <Mapping SourceColumn="Nombre_P" DataSetColumn="Nombre_P" />
+              <Mapping SourceColumn="Num_Tel" DataSetColumn="Num_Tel" />
+              <Mapping SourceColumn="Direccion" DataSetColumn="Direccion" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ferreteriaVerProveedores" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ferreteriaVerProveedores" msprop:Generator_UserDSName="ferreteriaVerProveedores">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="verproveedores" msprop:Generator_TableClassName="verproveedoresDataTable" msprop:Generator_TableVarName="tableverproveedores" msprop:Generator_TablePropName="verproveedores" msprop:Generator_RowDeletingName="verproveedoresRowDeleting" msprop:Generator_RowChangingName="verproveedoresRowChanging" msprop:Generator_RowEvHandlerName="verproveedoresRowChangeEventHandler" msprop:Generator_RowDeletedName="verproveedoresRowDeleted" msprop:Generator_UserTableName="verproveedores" msprop:Generator_RowChangedName="verproveedoresRowChanged" msprop:Generator_RowEvArgName="verproveedoresRowChangeEvent" msprop:Generator_RowClassName="verproveedoresRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Codigo_P" msprop:Generator_ColumnVarNameInTable="columnCodigo_P" msprop:Generator_ColumnPropNameInRow="Codigo_P" msprop:Generator_ColumnPropNameInTable="Codigo_PColumn" msprop:Generator_UserColumnName="Codigo_P" type="xs:int" />
+              <xs:element name="Nombre_P" msprop:Generator_ColumnVarNameInTable="columnNombre_P" msprop:Generator_ColumnPropNameInRow="Nombre_P" msprop:Generator_ColumnPropNameInTable="Nombre_PColumn" msprop:Generator_UserColumnName="Nombre_P" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Num_Tel" msprop:Generator_ColumnVarNameInTable="columnNum_Tel" msprop:Generator_ColumnPropNameInRow="Num_Tel" msprop:Generator_ColumnPropNameInTable="Num_TelColumn" msprop:Generator_UserColumnName="Num_Tel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Direccion" msprop:Generator_ColumnVarNameInTable="columnDireccion" msprop:Generator_ColumnPropNameInRow="Direccion" msprop:Generator_ColumnPropNameInTable="DireccionColumn" msprop:Generator_UserColumnName="Direccion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:verproveedores" />
+      <xs:field xpath="mstns:Codigo_P" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
